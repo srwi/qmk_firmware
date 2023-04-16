@@ -1,6 +1,6 @@
 {
     "manufacturer": "srwi",
-    "keyboard_name": "vortex_core",
+    "keyboard_name": "Vortex Core",
     "maintainer": "srwi",
     "bootloader": "caterina",
     "diode_direction": "COL2ROW",
@@ -39,7 +39,7 @@
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0001",
-        "vid": "0xA1DF"
+        "vid": "0x7372"
     },
     "layouts": {
         "LAYOUT": {
