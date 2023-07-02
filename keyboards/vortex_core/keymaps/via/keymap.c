@@ -4,8 +4,8 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
-    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_QUOT, KC_BSPC,
-    LT(2,KC_TAB), KC_A, KC_S,  KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_NUHS,          KC_ENT,
+    KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_QUOT, KC_BSPC,
+    LT(2,KC_TAB), KC_A, KC_S,  KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,          KC_ENT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_RSFT,          KC_SLSH,
     KC_LCTL, KC_LWIN, KC_LALT, MO(4),     LT(3, KC_SPC),           KC_SPC,           KC_RALT, MO(2),   KC_RGUI, KC_RCTL
   ),
@@ -40,3 +40,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______
   )
 };
+
+float startup[][2] = SONG(
+  B__NOTE(_REST),
+  E__NOTE(_GS6),
+  E__NOTE(_A6),
+  S__NOTE(_REST),
+  ED_NOTE(_E7),
+  S__NOTE(_REST),
+  ED_NOTE(_A7),
+);
+
+void keyboard_post_init_user(void) {
+    PLAY_SONG(startup);
+}
